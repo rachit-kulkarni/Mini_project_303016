@@ -13,12 +13,7 @@ Folder             | Description
 
 ## Contributors List and Summary
 
--- Content
-
-## Challenges Faced and How Was It Overcome
-
-content
-
+1)Rachit G Kulkarni
 
 ## Learning Resources
 1)https://www.geeksforgeeks.org/number-system-in-maths/ Used this to understand the conversions of various number systems.
