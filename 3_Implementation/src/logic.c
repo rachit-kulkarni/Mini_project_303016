@@ -2,216 +2,119 @@
 
 long int Bin_to_Dec(long int bin)
 {
-    int rem,sum=0,i=0;
+    int remainder,sum=0,i=0;
     while(bin!=0)
     {
-        rem=bin%10;
+        remainder=bin%10;
         bin=bin/10;
-        sum=sum+rem*pow(2,i);
+        sum=sum+remainder*pow(2,i);
         i++;
     }
      
-    printf("\nEquivalent Decimal Number : %d",sum);
+    return sum;
 }
  
 long int Bin_to_Oct(long int bin)
-{
-    int i=0,rem,sum=0,remain[100],len=0;
-     
-    while(bin!=0)
+{   long int octalnum = 0, j = 1, remainder;
+    while (bin != 0)
     {
-        rem=bin%10;
-        bin=bin/10;
-        sum=sum+rem*pow(2,i);
-        i++;
+        remainder = bin % 10;
+        octalnum = octalnum + remainder * j;
+        j = j * 2;
+        bin = bin / 10;
     }
-    i=0;
-    while(sum!=0)
-    {
-        remain[i]=sum%8;
-        sum=sum/8;
-        i++;
-        len++;
-    }
-    printf("\nEquivalent Octal Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        printf("%d",remain[i]);
-    }
+    return octalnum;
 }
  
 long int Bin_to_Hex(long int bin)
 {
-    int rem,i=0,sum=0,remain[100],len=0;
-     
-    while(bin!=0)
+    long int  hexadecimalval = 0, i = 1, remainder;
+ 
+    while (bin != 0)
     {
-        rem=bin%10;
-        bin=bin/10;
-        sum=sum+rem*pow(2,i);
-        i++;
+        remainder = bin % 10;
+        hexadecimalval = hexadecimalval + remainder * i;
+        i = i * 2;
+        bin = bin / 10;
     }
-    i=0;
-    while(sum!=0)
-    {
-        remain[i]=sum%16;
-        sum=sum/16;
-        i++;
-        len++;
-    }
-    printf("\nEquivalent Hexa-Decimal Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        switch(remain[i])
-        {
-            case 10:
-                printf("A"); break;
-             
-            case 11:
-                printf("B"); break;
-                 
-            case 12:
-                printf("C"); break;
-                 
-            case 13:
-                printf("D"); break;
-                 
-            case 14:
-                printf("E"); break;
-                 
-            case 15:
-                printf("F"); break;
-                 
-            default:
-                printf("%d",remain[i]);
-        }
-         
-    }
+    
+    return hexadecimalval;
 }
  
 long int Dec_to_Bin(long int dec)
 {
-    int rem[50],i,len=0;
-    do
+    long int bin = 0;
+    int remainder, temp = 1;
+
+    while (dec!=0)
     {
-        rem[i]=dec%2;
-        dec=dec/2;
-        i++;
-        len++;
+        remainder = dec%2;
+        dec = dec / 2;
+        bin = bin + remainder*temp;
+        temp = temp * 10;
     }
-    while(dec!=0);
-     
-    printf("\nEquivalent Binary Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        printf("%d",rem[i]);
-    }
+    return bin;
 }
  
 long int Dec_to_Oct(long int dec)
 {
-    int rem[50],i,len=0;
-    do
+    int octanum = 0, i = 1;
+
+    while (dec != 0)
     {
-        rem[i]=dec%8;
-        dec=dec/8;
-        i++;
-        len++;
+        octanum += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
     }
-    while(dec!=0);
-     
-    printf("\nEquivalent Octal Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        printf("%d",rem[i]);
-    }
+
+    return octanum;
 }
  
 long int Dec_to_Hex(long int dec)
 {
-    int rem[50],i,len=0;
-    do
-    {
-        rem[i]=dec%16;
-        dec=dec/16;
-        i++;
-        len++;
-    }
-    while(dec!=0);
-     
-    printf("\nEquivalent Hexa-Decimal Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        switch(rem[i])
-        {
-            case 10:
-                printf("A"); break;
-             
-            case 11:
-                printf("B"); break;
-                 
-            case 12:
-                printf("C"); break;
-                 
-            case 13:
-                printf("D"); break;
-                 
-            case 14:
-                printf("E"); break;
-                 
-            case 15:
-                printf("F"); break;
-                 
-            default:
-                printf("%d",rem[i]);
-        }
-         
-    }
-}
- 
-long int Oct_to_Bin(long int oct)
-{
-    int rem[50],len=0,decimal=0,i=0,num,ans;
-     
-    while(oct!=0)
-    {
-        ans=oct % 10;
-        decimal = decimal + ans * pow(8,i);
-        i++;
-        oct = oct/10;
-    }
-     
-    i=0;
-    do
-    {
-        rem[i]=decimal%2;
-        decimal=decimal/2;
-        i++;
-        len++;
-    }
-    while(decimal!=0);
-     
-    printf("\nEquivalent Binary Number : ");
-    for(i=len-1;i>=0;i--)
-    {
-        printf("%d",rem[i]);
-    }
+    long int bin = Dec_to_Bin(dec);
+    long int hexa = Bin_to_Hex(bin);
+    return hexa;   
 }
  
 long int Oct_to_Dec(long int oct)
 {
-    int decimal=0,i=0,num,ans;
-     
-    while(oct!=0)
+    long int dec = 0, i = 0;
+
+    while(oct != 0)
     {
-        ans=oct % 10;
-        decimal = decimal + ans * pow(8,i);
-        i++;
-        oct = oct/10;
+        dec += (oct%10) * pow(8,i);
+        ++i;
+        oct/=10;
     }
-    printf("\nEquivalent Decimal Number : %d",decimal);
+
+    i = 1;
+
+    return dec;
 }
- 
+
+long int Oct_to_Bin(long int oct)
+{
+    long int dec = 0, i = 0;
+    long  bin = 0;
+
+    // converting octal to decimal
+    while (oct != 0) {
+        dec += (oct % 10) * pow(8, i);
+        ++i;
+        oct /= 10;
+    }
+    i = 1;
+
+   // converting decimal to binary
+    while (dec != 0) {
+        bin += (dec % 2) * i;
+        dec /= 2;
+        i *= 10;
+    }
+    return bin;
+}
+
 long int Oct_to_Hex(long int oct)
 {
     int rem[50],len=0,decimal=0,i=0,num,ans=0;
