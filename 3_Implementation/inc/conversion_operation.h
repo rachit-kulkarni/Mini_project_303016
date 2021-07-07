@@ -1,8 +1,10 @@
-#ifndef __CONVERSION_OPERATION_H__
-#define __CONVERSION_OPERATION_H__
+#ifndef __CONVERSION_OPERATIONS_H__
+#define __CONVERSION_OPERATIONS_H__
+
 #include <stdio.h>
-#include <math.h>
-#include<string.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
 
 long int Bin_to_Dec(long int); /* Takes in the input of a binary number and converts it to Decimal*/ 
 long int Bin_to_Oct(long int); /* Takes in the input of a binary number and converts it to Octal*/
