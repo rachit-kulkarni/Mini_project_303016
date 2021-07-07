@@ -1,3 +1,13 @@
+/**
+ * @file conversion_operation.h
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-07-07
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #ifndef __CONVERSION_OPERATIONS_H__
 #define __CONVERSION_OPERATIONS_H__
 
