@@ -28,7 +28,5 @@ long int Oct_to_Bin(long int); /* Takes in the input of a octal number and conve
 long int Oct_to_Dec(long int); /* Takes in the input of a octal number and converts it to decimal*/
 long int Oct_to_Hex(long int); /* Takes in the input of a octal number and converts it to Hexadecimal*/
 
-long int Hex_to_Dec(char []);      /* Takes in the input of a hexadecimal number and converts it to Decimal*/
-long int Hex_to_Oct(char []);      /* Takes in the input of a hexadecimal number and converts it to octal*/
  
 #endif 

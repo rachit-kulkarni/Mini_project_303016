@@ -24,6 +24,4 @@ long int Dec_to_Hex(long int);
 long int Oct_to_Bin(long int); 
 long int Oct_to_Dec(long int); 
 long int Oct_to_Hex(long int); 
-long int Hex_to_Dec(char []); 
-long int Hex_to_Oct(char []); 
- 
+
