@@ -11,9 +11,6 @@
 
 #include <conversion_operation.h>
 
-/* Status of the operation requested */
-#define VALID   (1)
-#define INVALID (0)
 
 long int Bin_to_Dec(long int);
 long int Bin_to_Oct(long int); 
