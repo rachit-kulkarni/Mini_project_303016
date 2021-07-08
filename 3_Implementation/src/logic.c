@@ -175,7 +175,7 @@ long int Oct_to_Hex(long int oct)
  
 long int Hex_to_Dec(char hex[])
 {
-    int i,num=0,power=0,decimal=0;
+    long int i,num=0,power=0,decimal=0;
      
     for(i=strlen(hex)-1;i>=0;i--)
     {

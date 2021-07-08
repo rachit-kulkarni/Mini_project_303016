@@ -1,10 +1,7 @@
-SRC = test.c\
- src/sqr.c\
- src/sum.c
+SRC = logic.c
 
-OBJ =test.o\
- sum.o\
- sqr.o
+OBJ =logic.o
+ 
 
 INC = inc
 
@@ -14,9 +11,9 @@ CFLAGS = -I$(INC)
 
 
 all.out:  $(OBJ) 
-	gcc $^ -I$(INC) -o $@
+	gcc $^ -I$(INC) -lm -o $@
 
-%.o: src/%.c inc/fun.h
+%.o: src/%.c inc/conversion_operation.h
 	gcc $^  -I$(INC) -c 
 
 
