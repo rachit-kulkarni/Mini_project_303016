@@ -26,4 +26,4 @@ Here various test cases are given to each of the following functions to make sur
 As mentioned the code converts one number system value to another,each of the function written here needs a input data which is either binary or decimal.Using the test cases written we convert the given data to either binary,decimal or hexadecimal.
 
 ## Gantt Chart
-![Optional Text](https://github.com/rachit-kulkarni/Mini_project_303016.git/1_Requirements/GanttChart.jpg)
+![Image](../1_Requirements/GanttChart.jpg))
