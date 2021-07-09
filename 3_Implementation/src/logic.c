@@ -37,18 +37,16 @@ long int Bin_to_Oct(long int bin)
 }
  
 long int Bin_to_Hex(long int bin)
-{
-    long int  hexadecimalval = 0, i = 1, remainder;
- 
-    while (bin != 0)
-    {
+{   long int hexadecimal_number = 0, i = 1, remainder;
+    
+    while (bin!= 0)
+    {   
         remainder = bin % 10;
-        hexadecimalval = hexadecimalval + remainder * i;
+        hexadecimal_number = hexadecimal_number + remainder * i;
         i = i * 2;
         bin = bin / 10;
     }
-    
-    return hexadecimalval;
+    return hexadecimal_number;
 }
  
 long int Dec_to_Bin(long int dec)
