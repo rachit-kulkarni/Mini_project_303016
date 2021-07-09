@@ -15,7 +15,7 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 
-SRC = logic.c
+SRC = src/logic.c
 
 TEST_SRC = operations_test.c\
 unity/unity.c
