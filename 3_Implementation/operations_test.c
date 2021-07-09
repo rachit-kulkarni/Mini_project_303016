@@ -19,8 +19,8 @@ void tearDown(){}
 
 void test_bin_to_dec(void)
 {
-  TEST_ASSERT_EQUAL(4, Bin_to_Dec(100));
-  TEST_ASSERT_EQUAL(10, Bin_to_Dec(1010));
+  TEST_ASSERT_EQUAL(4, Bin_to_Dec(100));//Pass Cases
+  TEST_ASSERT_EQUAL(10, Bin_to_Dec(1010));//Pass Cases
 }
 
 
