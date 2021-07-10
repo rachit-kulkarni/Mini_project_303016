@@ -11,4 +11,4 @@ jobs:
       - name: Install cppcheck
         run: sudo apt-get -y install cppcheck
       - name: Cppcheck code
-        run: cppcheck Mini_project_303016/3_Implementation 
+        run: cppcheck Mini_project_303016/3_Implementation/operations_test.c
