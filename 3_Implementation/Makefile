@@ -10,27 +10,81 @@ else
    endif
 endif
 
-PROJ_NAME = LOGIC
-TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-BUILD_DIR = Build
+# Name of the project
+PROJECT_NAME = Logic
 
-SRC = src/logic.c
+# Output directory
+BUILD = build
 
-TEST_SRC = operations_test.c\
-unity/unity.c
+# All source code files
+SRC = operations_test.c\
+src/logic.c
 
-INC = -Iinc\
--Iunity
+# All test source files
+TEST_SRC = src/logic.c\
+3_Implementation/operations_test.c\
+unity/unity.c\
 
-all: $(SRC) $(TEST_SRC) $(BUILD_DIR)
-	gcc $(SRC) $(TEST_SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
-run: all
-	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+# All include folders with header files
+INC	= -Iinc\
+-Iunity\
 
-$(BUILD_DIR):
-	mkdir $(BUILD_DIR)
+#Library Inlcudes
+#INCLUDE_LIBS = 
+INCLUDE_LIBS = -lcunit
 
+# Project Output name
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+# Document files
+DOCUMENTATION_OUTPUT = documentation/html
+
+# Default target built
+$(PROJECT_NAME):all
+
+# Run the target even if the matching name exists
+.PHONY: run clean test doc all
+
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+
+# Call `make run` to run the application
+run:$(PROJECT_NAME)
+	./$(PROJECT_OUTPUT).out
+
+# Document the code using Doxygen
+doc:
+	make -C ./documentation
+
+# Build and run the unit tests
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+
+analyze: test memcheck staticcheck coverage sanitize_check
+
+staticcheck:
+	cppcheck --enable=all -iunity .
+
+memcheck:
+	valgrind ./$(TEST_OUTPUT)
+
+sanitize_check:
+	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+
+coverage:$(TEST_SRC)
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+	gcov -a calculator_operations.c
+
+# Remove all the built files, invoke by `make clean`
 clean:
-	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
+
+# Create new build folder if not present
+$(BUILD):
+	mkdir build
