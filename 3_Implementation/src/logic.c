@@ -11,42 +11,39 @@
 #include <conversion_operation.h>
 
 long int Bin_to_Dec(long int bin)
-{   char s[100];int flag = 0;
-    sprintf(s,"%ld",bin);
-    int string_length = strlen(s);
-    for(int literal=0;literal<string_length;literal++){
-        if((s[literal] != '0')|| (s[literal] != '1')){
-
-         flag += 1;
-    }
-    }
-    if (flag != 0){
-        return -1;
-    }
-    else{
+{  
            int remainder,sum=0,i=0;
             while(bin!=0)
             {
                 remainder=bin%10;
+                if(remainder != 0 && remainder != 1){return -1;}
                 bin=bin/10;
                 sum=sum+remainder*pow(2,i);
                 i++;
             }
         return sum;
 
-    }
 }
 
+
 long int Bin_to_Oct(long int bin)
-{   long int octalnum = 0, j = 1, remainder;
-    while (bin != 0)
-    {
-        remainder = bin % 10;
-        octalnum = octalnum + remainder * j;
-        j = j * 2;
-        bin = bin / 10;
+{   long int octal = 0, decimal = 0, i = 0;
+
+    // converting binary to decimal
+    while (bin != 0) {
+        decimal += (bin % 10) * pow(2, i);
+        ++i;
+        bin /= 10;
     }
-    return octalnum;
+    i = 1;
+
+    // converting to decimal to octal
+    while (decimal != 0) {
+        octal += (decimal % 8) * i;
+        decimal /= 8;
+        i *= 10;
+    }
+    return octal;
 }
  
 long int Bin_to_Hex(long int bin)
@@ -55,6 +52,7 @@ long int Bin_to_Hex(long int bin)
     while (bin!= 0)
     {   
         remainder = bin % 10;
+        if(remainder != 0 && remainder != 1){return -1;}
         hexadecimal_number = hexadecimal_number + remainder * i;
         i = i * 2;
         bin = bin / 10;

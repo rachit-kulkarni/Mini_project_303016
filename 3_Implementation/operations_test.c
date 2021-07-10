@@ -16,11 +16,22 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 
-
 void test_bin_to_dec(void)
 {
   TEST_ASSERT_EQUAL(4, Bin_to_Dec(100));//Pass Cases
   TEST_ASSERT_EQUAL(10, Bin_to_Dec(1010));//Pass Cases
+}
+
+void test_bin_to_oct(void){
+
+  TEST_ASSERT_EQUAL(51, Bin_to_Oct(101001));//Pass Cases
+  TEST_ASSERT_EQUAL(12, Bin_to_Oct(1010));//Pass Cases
+}
+
+void test_bin_to_hex(void){
+
+  TEST_ASSERT_EQUAL_HEX(0x15, Bin_to_Hex(10101));//Pass Cases
+  TEST_ASSERT_EQUAL_HEX(0x79, Bin_to_Hex(1111001));//Pass Cases
 }
 
 void test_dec_to_bin(void){
@@ -52,13 +63,13 @@ void test_Oct_to_Bin(void){
 
 }
 
-/*void test_fail_bin_to_dec(void)
+void test_fail_bin_to_dec(void)
 {
-  //TEST_ASSERT_EQUAL(-1, Bin_to_Dec(1290));//fail Cases
-  TEST_ASSERT_EQUAL(-1, Bin_to_Dec(1234));//fail case
-  TEST_ASSERT_EQUAL(-1,Bin_to_Dec(1010));
+  TEST_ASSERT_EQUAL(-1, Bin_to_Dec(1290));//Fails
+  TEST_ASSERT_EQUAL(-1, Bin_to_Dec(10102));//Fails
+  //TEST_ASSERT_EQUAL(-1,Bin_to_Dec("ABC12"));//Fails
 }
-*/
+
 void test_fail_dec_to_bin(void){
 
 TEST_ASSERT_EQUAL(101, Dec_to_Bin(5));//Pass Cases
@@ -88,24 +99,32 @@ void test_fail_Oct_to_Bin(void){
 
 }
 
+void test_fail_bin_to_hex(void){
+
+  TEST_ASSERT_EQUAL(-1, Bin_to_Hex(123));//Pass Cases
+  TEST_ASSERT_EQUAL(-1, Bin_to_Hex(32));//Pass Cases
+}
+
+
 int main(void)
 {
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
 
 /* Run Test functions */
-  RUN_TEST(test_bin_to_dec);/*
-  RUN_TEST(test_dec_to_bin);
-  RUN_TEST(test_Dec_to_Oct);
-  RUN_TEST(test_Oct_to_Dec);
-  RUN_TEST(test_Oct_to_Bin);*/
-/*
-  RUN_TEST(test_fail_bin_to_dec);
-  RUN_TEST(test_fail_dec_to_bin);
-  RUN_TEST(test_fail_Dec_to_Oct);
-  RUN_TEST(test_fail_Oct_to_Dec);
-  RUN_TEST(test_fail_Oct_to_Bin);
-  */
+  //RUN_TEST(test_bin_to_dec);
+  //RUN_TEST(test_dec_to_bin); 
+  //RUN_TEST(test_Dec_to_Oct);
+  //RUN_TEST(test_Oct_to_Dec);
+  //RUN_TEST(test_Oct_to_Bin);
+    //RUN_TEST(test_bin_to_oct);
+    RUN_TEST(test_bin_to_hex);
+  //RUN_TEST(test_fail_bin_to_dec);  
+ // RUN_TEST(test_fail_dec_to_bin);
+ // RUN_TEST(test_fail_Dec_to_Oct);
+ // RUN_TEST(test_fail_Oct_to_Dec);
+ // RUN_TEST(test_fail_Oct_to_Bin);
+    RUN_TEST(test_fail_bin_to_hex);
   /* Close the Unity Test Framework */
   return UNITY_END();
 }
