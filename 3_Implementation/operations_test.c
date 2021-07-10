@@ -137,7 +137,7 @@ int main(void)
 {
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
-  int n;
+  
 /* Run Test functions */
   RUN_TEST(test_Bin_to_Dec);
   RUN_TEST(test_Bin_to_Oct);
