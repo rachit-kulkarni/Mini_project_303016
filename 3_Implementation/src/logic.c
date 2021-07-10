@@ -11,19 +11,32 @@
 #include <conversion_operation.h>
 
 long int Bin_to_Dec(long int bin)
-{
-    int remainder,sum=0,i=0;
-    while(bin!=0)
-    {
-        remainder=bin%10;
-        bin=bin/10;
-        sum=sum+remainder*pow(2,i);
-        i++;
+{   char s[100];int flag = 0;
+    sprintf(s,"%ld",bin);
+    int string_length = strlen(s);
+    for(int literal=0;literal<string_length;literal++){
+        if((s[literal] != '0')|| (s[literal] != '1')){
+
+         flag += 1;
     }
-     
-    return sum;
+    }
+    if (flag != 0){
+        return -1;
+    }
+    else{
+           int remainder,sum=0,i=0;
+            while(bin!=0)
+            {
+                remainder=bin%10;
+                bin=bin/10;
+                sum=sum+remainder*pow(2,i);
+                i++;
+            }
+        return sum;
+
+    }
 }
- 
+
 long int Bin_to_Oct(long int bin)
 {   long int octalnum = 0, j = 1, remainder;
     while (bin != 0)
