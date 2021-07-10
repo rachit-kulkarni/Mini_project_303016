@@ -10,50 +10,27 @@ else
    endif
 endif
 
+PROJ_NAME = LOGIC
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-# Name of the project
-PROJECT_NAME = Logic
+BUILD_DIR = Build
 
-# Output directory
-BUILD = build
+SRC = src/logic.c
 
-# All source code files
-SRC = operations_test.c\
-src/logic.c
+TEST_SRC = operations_test.c\
+unity/unity.c
 
-# All test source files
-TEST_SRC = src/logic.c\
-3_Implementation/operations_test.c\
-unity/unity.c\
+INC = -Iinc\
+-Iunity
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+all: $(SRC) $(TEST_SRC) $(BUILD_DIR)
+	gcc $(SRC) $(TEST_SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-#Library Inlcudes
-#INCLUDE_LIBS = 
-INCLUDE_LIBS = -lcunit
-
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
-
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
-
-# Default target built
-$(PROJECT_NAME):all
-
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
 
 # Document the code using Doxygen
 doc:
@@ -81,9 +58,9 @@ coverage:$(TEST_SRC)
 	./$(TEST_OUTPUT)
 	gcov -a calculator_operations.c
 
-# Remove all the built files, invoke by `make clean`
 clean:
 	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
+
 
 # Create new build folder if not present
 $(BUILD):
