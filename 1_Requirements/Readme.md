@@ -30,9 +30,12 @@ The main aim of the program/code is to take in the input of one number system an
  
 ### How:
  It uses simple logic to convert the given input in one number system to desired number system.
- 
- 
- 
+
+## Detail Requirements:
+
+
+
+
 
 ## Interface
 The aim is to display which of the test cases work and display the number of cases passed and failed for each of the function written.
