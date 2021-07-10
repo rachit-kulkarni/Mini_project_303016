@@ -25,18 +25,11 @@ long int Bin_to_Dec(long int bin)
 
 }
 
-long int Bin_to_Oct(long int binarynum)
+long int Bin_to_Oct(long int bin)
 {   
-    long int  octalnum = 0, j = 1, remainder;
-    while (binarynum != 0)
-    {
-        remainder = binarynum % 10;
-        if(remainder != 0 && remainder != 1){return -1;}
-        octalnum = octalnum + remainder * j;
-        j = j * 2;
-        binarynum = binarynum / 10;
-    }
-    return octalnum;
+    long int dec = Bin_to_Dec(bin);
+    long int oct = Dec_to_Oct(dec);
+    return oct;
 }
  
 long int Bin_to_Hex(long int bin)

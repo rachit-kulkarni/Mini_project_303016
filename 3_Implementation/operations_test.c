@@ -138,7 +138,7 @@ int main(void)
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
 
-/* Run Test functions *//*
+/* Run Test functions */
   RUN_TEST(test_Bin_to_Dec);
   RUN_TEST(test_Bin_to_Oct);
   RUN_TEST(test_Bin_to_Hex);
@@ -146,7 +146,7 @@ int main(void)
   RUN_TEST(test_Dec_to_Oct);
   RUN_TEST(test_Dec_to_Hex);
   RUN_TEST(test_Oct_to_Dec);
-  RUN_TEST(test_Oct_to_Bin);*/
+  RUN_TEST(test_Oct_to_Bin);
   
   
   RUN_TEST(test_fail_bin_to_dec);  
