@@ -156,7 +156,7 @@ int main(void)
   //RUN_TEST(test_fail_Dec_to_Oct);
   RUN_TEST(test_fail_Oct_to_Dec);
   RUN_TEST(test_fail_Oct_to_Bin);
-  RUN_TEST(test_fail_Oct_to_Hex);
+ // RUN_TEST(test_fail_Oct_to_Hex);
   /* Close the Unity Test Framework */
   return UNITY_END();
 }
