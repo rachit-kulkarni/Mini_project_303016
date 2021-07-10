@@ -11,6 +11,9 @@ Hexadecimal allows us to use 4x fewer bits, so, it is very useful.Besides no pro
 
 The main aim of the program/code is to take in the input of one number system and convert it to another desired system. As we don't take inputs from any user here ,the code only tests the given functions and indicates the test cases that have passed.
 
+## SWOT Analysis
+![Image](../1_Requirements/SWOT.png)
+
 ## Interface
 The aim is to display which of the test cases work and display the number of cases passed and failed for each of the function written.
 
@@ -28,5 +31,4 @@ As mentioned the code converts one number system value to another,each of the fu
 ## Gantt Chart
 ![Image](../1_Requirements/GanttChart.jpg)
 
-## SWOT Analysis
-![Image](../1_Requirements/SWOT.png)
+
