@@ -14,6 +14,26 @@ The main aim of the program/code is to take in the input of one number system an
 ## SWOT Analysis
 ![Image](../1_Requirements/SWOT.png)
 
+## 4W's and 1'H
+
+### Who:
+ This program can be used by anyone interested for number system conversion.
+
+### What:
+ The primary use of the program is to convert from one number system to another.
+
+### When:
+ This can be used whenever one needs to encode data to enter it to the computer for any operations desired. In digital hardware, to reduce the number of bits used   this can be used to convert one system to another.
+
+### Where:
+ Can be run on any Computer with a c compiler.
+ 
+### How:
+ It uses simple logic to convert the given input in one number system to desired number system.
+ 
+ 
+ 
+
 ## Interface
 The aim is to display which of the test cases work and display the number of cases passed and failed for each of the function written.
 
