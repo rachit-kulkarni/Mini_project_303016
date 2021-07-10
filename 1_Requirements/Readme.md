@@ -27,3 +27,6 @@ As mentioned the code converts one number system value to another,each of the fu
 
 ## Gantt Chart
 ![Image](../1_Requirements/GanttChart.jpg)
+
+## SWOT Analysis
+
