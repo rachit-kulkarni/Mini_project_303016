@@ -12,10 +12,10 @@
 
 long int Bin_to_Dec(long int bin)
 {  
-           int remainder,sum=0,i=0;
+           int sum=0,i=0;
             while(bin!=0)
             {
-                remainder=bin%10;
+                int remainder=bin%10;
                 if(remainder != 0 && remainder != 1){return -1;}
                 bin=bin/10;
                 sum=sum+remainder*pow(2,i);
@@ -33,11 +33,11 @@ long int Bin_to_Oct(long int bin)
 }
  
 long int Bin_to_Hex(long int bin)
-{   long int hexadecimal_number = 0, i = 1, remainder;
+{   long int hexadecimal_number = 0, i = 1;
     
     while (bin!= 0)
     {   
-        remainder = bin % 10;
+        long int remainder = bin % 10;
         if(remainder != 0 && remainder != 1){return -1;}
         hexadecimal_number = hexadecimal_number + remainder * i;
         i = i * 2;

@@ -20,6 +20,8 @@ SRC = src/logic.c
 TEST_SRC = operations_test.c\
 unity/unity.c
 
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+ 
 INC = -Iinc\
 -Iunity
 
