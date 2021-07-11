@@ -1,6 +1,6 @@
-|Build|Code Coverage|
-|-----|-------------|
-|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|
+|Build|Code Coverage|Unity Testing |
+|-----|-------------|--------------|
+|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|[![Unit Testing - Unity](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml)|
 
 |                        Code Quality                                                        | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
