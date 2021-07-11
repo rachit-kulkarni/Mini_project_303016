@@ -39,9 +39,9 @@ all:
 run:
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS) -lm
-	./$(TEST_OUTPUT)
+test:
+	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
+	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 
 
 coverage:
