@@ -42,7 +42,7 @@ doc:
 
 # Build and run the unit tests
 
-analyze: test valgrind staticcheck coverage sanitize_check
+analyze: staticcheck coverage 
 
 staticcheck:
 	cppcheck src/logic.c operations_test.c inc/conversion_operation.h 
