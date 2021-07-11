@@ -55,7 +55,7 @@ coverage:$(TEST_SRC)
 	gcc -fprofile-arcs -ftest-coverage $(SRC) -o $(PROJECT_NAME)
 	./${PROJECT_NAME}
 	gcov -a operations_test.c
-
+	
 clean:
 	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
 
