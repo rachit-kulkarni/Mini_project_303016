@@ -2,6 +2,9 @@
  | Code Quality | 
 | ---------- |
 ![Image](https://www.code-inspector.com/project/24939/score/svg)
+![Image](https://www.code-inspector.com/project/24939/status/svg)
+
+
 
 
 # SDLC Activity Based Learning For Mini Project 
