@@ -56,7 +56,7 @@ valgrind:
 	
 clean:
 	$(RM) *.DAT
-	$(RM) *.$(EXEC)
+	#$(RM) *.$(EXEC)
 	$(RM) *.gcda
 	$(RM) *.gcno
 	$(RM) *.c.gcov
