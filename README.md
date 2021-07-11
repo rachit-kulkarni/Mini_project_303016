@@ -1,9 +1,9 @@
 
 |                        Code Quality                                                        | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
-|![Image](https://www.code-inspector.com/project/24939/score/svg)                            |[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
+|[![cppcheck-action](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
 |![Image](https://www.code-inspector.com/project/24939/status/svg)                           |
-
+|![Image](https://www.code-inspector.com/project/24939/score/svg)                            |
                                                  
   
 
@@ -26,7 +26,7 @@ Folder             | Description
 
 ## Contributors List and Summary
 
-1)Rachit G Kulkarni
+1)Rachit G Kulkarni(303016)
 
 ## Learning Resources
 1)https://www.geeksforgeeks.org/number-system-in-maths/ Used this to understand the conversions of various number systems.
