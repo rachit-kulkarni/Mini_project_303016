@@ -1,4 +1,4 @@
-## Functions
+## Functions to test the logic.c
   Here the various functions implemented are 
   i) Binary to Decimal
   ii)Binary to Octal
@@ -22,8 +22,8 @@
   
   The functions written to test the failing cases are as follows:
   
-   Sl No  |       Fail_Functions               |         
- -------|--------------------------------------|
+ Sl No  |       Fail_Functions                 |         
+--------|--------------------------------------|
   `1`   |  `void test_fail_Bin_to_Dec(void)`   | 
   `2`   |  `void test_fail_Bin_to_Oct(void)`   |
   `3`   |   `void test_fail_Bin_to_Hex(void)`  |
