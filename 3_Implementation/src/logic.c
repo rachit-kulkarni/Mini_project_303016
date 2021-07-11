@@ -51,7 +51,7 @@ long int Bin_to_Hex(long int bin)
 }
 
 long int Dec_to_Oct(long int dec)
-{
+{   int n;
     int octanum = 0, i = 1;
 
     while (dec != 0)
