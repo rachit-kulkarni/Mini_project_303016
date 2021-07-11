@@ -40,13 +40,13 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	gcc $(TEST_SRC) $(SRC)$(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
 	./$(TEST_OUTPUT)
 
 analyze: test memcheck staticcheck coverage sanitize_check
 
 staticcheck:
-	cppcheck --enable=all -iunity .
+	cppcheck src/logic.c operations_test.c inc/conversion_operation.h 
 
 memcheck:
 	valgrind ./$(TEST_OUTPUT)

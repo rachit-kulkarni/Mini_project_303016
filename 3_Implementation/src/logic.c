@@ -12,16 +12,16 @@
 
 long int Bin_to_Dec(long int bin)
 {  
-           int sum=0,i=0;
+           int dec=0,i=0;
             while(bin!=0)
             {
                 int remainder=bin%10;
                 if(remainder != 0 && remainder != 1){return -1;}
                 bin=bin/10;
-                sum=sum+remainder*pow(2,i);
+                dec=dec+remainder*pow(2,i);
                 i++;
             }
-        return sum;
+        return dec;
 
 }
 
@@ -49,11 +49,11 @@ long int Bin_to_Hex(long int bin)
 long int Dec_to_Bin(long int dec)
 {  
     long int bin = 0;
-    long int remainder, temp = 1;
+    long int temp = 1;
 
     while (dec!=0)
     {
-        remainder = dec%2;
+       long int  remainder = dec%2;
         dec = dec / 2;
         bin = bin + remainder*temp;
         temp = temp * 10;
@@ -74,37 +74,23 @@ long int Dec_to_Oct(long int dec)
 
     return octanum;
 }
- 
+ /*
 long int Dec_to_Hex(long int dec)
 {
     long int bin = Dec_to_Bin(dec);
     long int hexa = Bin_to_Hex(bin);
     return hexa;   
-}
+}*/
  
 long int Oct_to_Bin(long int oct)
-{
-    long int dec = 0, i = 0;
-    long  bin = 0;
+{  
     if((oct %10) == 8 || (oct % 10) == 9 )
     {return -1;}
     else{
-    // converting octal to decimal
-    while (oct != 0) {
-        dec += (oct % 10) * pow(8, i);
-        ++i;
-        oct /= 10;
-    }
-    i = 1;
-
-   // converting decimal to binary
-    while (dec != 0) {
-        bin += (dec % 2) * i;
-        dec /= 2;
-        i *= 10;
-    }
+    long int dec = Oct_to_Dec(oct);
+    long int bin = Dec_to_Bin(dec);
     return bin;
-}
+}   
 }
 
 long int Oct_to_Dec(long int oct)
@@ -125,7 +111,7 @@ long int Oct_to_Dec(long int oct)
         return dec;
     }
 }
-
+/*
 long int Oct_to_Hex(long int oct)
 {
     long int bin = Oct_to_Bin(oct);
@@ -133,3 +119,4 @@ long int Oct_to_Hex(long int oct)
     return hex; 
 }
  
+*/
