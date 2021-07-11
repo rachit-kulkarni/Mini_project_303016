@@ -55,8 +55,7 @@ cppcheck:
 	cppcheck --enable=all $(SRC) main.c
 	
 valgrind:
-
-	valgrind ./.$(EXEC)
+	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 	
 clean:
 	$(RM) *.DAT
