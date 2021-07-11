@@ -1,9 +1,11 @@
 
- | Code Quality | 
-| ---------- |
-![Image](https://www.code-inspector.com/project/24939/score/svg)
-![Image](https://www.code-inspector.com/project/24939/status/svg)
+|                        Code Quality                                                        | Git-Instructor   |                                                         
+| ------------------------------------------------------------------------------------------ |------------------|    
+|![Image](https://www.code-inspector.com/project/24939/score/svg)                            |[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
+|![Image](https://www.code-inspector.com/project/24939/status/svg)                           |
 
+                                                 
+  
 
 
 
