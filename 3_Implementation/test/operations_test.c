@@ -11,6 +11,7 @@
 
 #include "conversion_operation.h"
 #include "unity.h"
+#include "unity_internals.h"
 /* Required by the unity test framework */
 void setUp(){}
 /* Required by the unity test framework */
