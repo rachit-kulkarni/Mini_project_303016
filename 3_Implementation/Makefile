@@ -1,3 +1,22 @@
+PROJ_NAME = CONVERSION_LOGIC
+TEST+PROJ_NAME = Test_$(PROJ_NAME)
+
+#all source files
+SRC =src/logic.c
+
+#all test source files
+
+TEST_SRC = test/operations_test.c\
+unit/unity.c
+
+COV_SRC = operations_test.c
+
+INC_H = inc
+INC_T = unity
+
+
+#selecting executable file
+
 ifdef OS
    RM = del /q
    FixPath = $(subst /,\,$1)
@@ -10,46 +29,37 @@ else
    endif
 endif
 
-PROJ_NAME = LOGIC
-TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-BUILD_DIR = Build
+.PHONY: run clean test doc all
 
-SRC = src/logic.c
+all:
+	gcc -I $(INC_H) $(SRC) main.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
+	
 
-TEST_SRC = operations_test.c\
-unity/unity.c
+run:
+	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
-TEST_OUTPUT = $(Build)/Test_$(PROJECT_NAME).out
- 
-INC = -Iinc\
--Iunity
+test: 
+	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
+	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
+	
+coverage:
+	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/operations_test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
+	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(COV_SRC)
 
-INCLUDE_LIBS = 
-
-all: $(SRC) $(TEST_SRC) $(BUILD_DIR)
-	gcc -g $(SRC) $(TEST_SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-
-run: all
-	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
-
-$(BUILD_DIR):
-	mkdir $(BUILD_DIR)
-
-# Document the code using Doxygen
-doc:
-	make -C ./documentation
-
-# Build and run the unit tests
-
-staticcheck:
-	cppcheck src/logic.c operations_test.c inc/conversion_operation.h 
-
+cppcheck:
+	cppcheck --enable=all $(SRC) main.c
+	
+valgrind:
+	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 	
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
+	$(RM) *.DAT
+	$(RM) *.$(EXEC)
+	$(RM) *.gcda
+	$(RM) *.gcno
+	$(RM) *.c.gcov
 
-
-# Create new build folder if not present
 $(BUILD):
 	mkdir build
