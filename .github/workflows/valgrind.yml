@@ -1,4 +1,5 @@
-name: CodeQuality Valgrind
+name: Valgrind
+
 on:
   push:
     branches: [ main ]
@@ -6,11 +7,17 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Valgrid
-      run: make -C 3_Implementation/Build valgrind
+    - name: apt install dependency
+      run: |
+        sudo apt-get -y install valgrind
+        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
+    - name: make run
+      run: |
+        make run -C 3_Implementation/
+        valgrind ./3_Implementation/build/Test_LOGIC.out

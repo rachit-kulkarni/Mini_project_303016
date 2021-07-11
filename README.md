@@ -1,3 +1,6 @@
+|Build|
+|-----|
+|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|
 
 |                        Code Quality                                                        | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
