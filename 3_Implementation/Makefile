@@ -47,7 +47,9 @@ coverage:
 	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/operations_test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
 	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(COV_SRC)
-
+	
+doc:
+	make -C ./documentation
 cppcheck:
 	cppcheck --enable=all $(SRC) main.c
 	
