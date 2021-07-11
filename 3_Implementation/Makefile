@@ -20,13 +20,15 @@ SRC = src/logic.c
 TEST_SRC = operations_test.c\
 unity/unity.c
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(Build)/Test_$(PROJECT_NAME).out
  
 INC = -Iinc\
 -Iunity
 
+INCLUDE_LIBS = 
+
 all: $(SRC) $(TEST_SRC) $(BUILD_DIR)
-	gcc $(SRC) $(TEST_SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	gcc -g $(SRC) $(TEST_SRC) $(INC) -lm -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
@@ -39,26 +41,20 @@ doc:
 	make -C ./documentation
 
 # Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(SRC)$(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
 
-analyze: test memcheck staticcheck coverage sanitize_check
+analyze: test valgrind staticcheck coverage sanitize_check
 
 staticcheck:
 	cppcheck src/logic.c operations_test.c inc/conversion_operation.h 
 
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
+valgrind:
+	valgrind -v Build/Test_LOGIC.out
 
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
 
 coverage:$(TEST_SRC)
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-	gcov -a calculator_operations.c
+	gcc -fprofile-arcs -ftest-coverage $(SRC) -o $(PROJECT_NAME)
+	./${PROJECT_NAME}
+	gcov -a operations_test.c
 
 clean:
 	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
