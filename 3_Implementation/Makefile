@@ -42,9 +42,9 @@ doc:
 
 # Build and run the unit tests
 
-analyze: staticcheck 
+analyze: staticchecks 
 
-staticcheck:
+staticchecks:
 	cppcheck src/logic.c operations_test.c inc/conversion_operation.h 
 
 	
