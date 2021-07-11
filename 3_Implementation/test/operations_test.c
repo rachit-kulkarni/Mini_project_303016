@@ -17,6 +17,21 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 /*Pass Test Cases */
+
+void test_Bin_to_Dec(void);
+void test_Bin_to_Hex(void);
+void test_Bin_to_Oct(void);
+void test_Dec_to_Oct(void);
+void test_Oct_to_Dec(void);
+void test_Oct_to_Bin(void);
+
+void test_fail_Bin_to_Dec(void);
+void test_fail_Bin_to_Hex(void);
+void test_fail_Bin_to_Oct(void);
+void test_fail_Dec_to_Oct(void);
+void test_fail_Oct_to_Dec(void);
+void test_fail_Oct_to_Bin(void);
+
 void test_Bin_to_Dec(void)
 {
   TEST_ASSERT_EQUAL(4, Bin_to_Dec(100));//Pass Cases

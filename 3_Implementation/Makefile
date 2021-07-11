@@ -1,5 +1,5 @@
 PROJ_NAME = CONVERSION_LOGIC
-TEST+PROJ_NAME = Test_$(PROJ_NAME)
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 #all source files
 SRC =src/logic.c
@@ -56,11 +56,11 @@ cppcheck:
 	
 valgrind:
 
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
+	valgrind ./.$(EXEC)
 	
 clean:
 	$(RM) *.DAT
-	#$(RM) *.$(EXEC)
+	$(RM) *.$(EXEC)
 	$(RM) *.gcda
 	$(RM) *.gcno
 	$(RM) *.c.gcov
