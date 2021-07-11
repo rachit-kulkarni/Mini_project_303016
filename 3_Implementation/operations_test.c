@@ -46,14 +46,7 @@ void test_Dec_to_Oct(void){
   TEST_ASSERT_EQUAL(23, Dec_to_Oct(19));//Pass Cases
 
 }
-/*
-void test_Dec_to_Hex(void){
 
-  TEST_ASSERT_EQUAL_HEX(0x5, Dec_to_Hex(5));//Pass Cases
-  TEST_ASSERT_EQUAL_HEX(0x13, Dec_to_Hex(19));//Pass Cases
-  TEST_ASSERT_EQUAL_HEX(0x2cd,Dec_to_Hex(717));
-}
-*/
 void test_Oct_to_Dec(void){
 
   TEST_ASSERT_EQUAL(5, Oct_to_Dec(5));//Pass Cases
@@ -67,13 +60,7 @@ void test_Oct_to_Bin(void){
   TEST_ASSERT_EQUAL(1000, Oct_to_Bin(10));//Pass Cases
   TEST_ASSERT_EQUAL(11011, Oct_to_Bin(33));//Pass Cases
 }
-/*
-void test_Oct_to_Hex(void){
 
-  TEST_ASSERT_EQUAL_HEX(0x10, Oct_to_Hex(20));//Pass Cases
-  TEST_ASSERT_EQUAL_HEX(0x1b, Oct_to_Hex(33));//Pass Cases
-  }
-*/
 
 /*Fail Test Cases */
 void test_fail_bin_to_dec(void)
