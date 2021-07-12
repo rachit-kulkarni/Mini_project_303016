@@ -1,7 +1,7 @@
 
 # Mini Project 
 
-#C program to do Number system conversion.The program takes in the data in one of the number system and convert it to any other desired system.
+C program to do Number system conversion.The program takes in the data in one of the number system and convert it to any other desired system.
 
 
 ## Folder Structure
