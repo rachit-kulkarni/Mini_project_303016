@@ -2,60 +2,60 @@
 
 int main(){
 	long int binary,octal,hexadecimal,decimal;
-	int choice = 1,option;
+	int choice = 1,option=6;
 	srand(time(0));
 	printf("\n !!Number System Converter!!\n" );
 	for (int i = 0; i < 1; i++) {
-        option = (rand() % (8)) -1;
+        option = (rand() % (6)) +1;
     }
 	while(choice){
-	printf(" 1: Binary to Decimal.\n2: Binary to Octal.\n3: Binary to Hexa-Decimal.\n");
-	printf(" 4: Decimal to Octal.\n5: Octal to Decimal.\n6: Octal to Binary.\n");
-	printf("\n Enter option ");
+	printf(" 1: Binary to Decimal.\n 2: Binary to Octal.\n 3: Binary to Hexa-Decimal.\n");
+	printf(" 4: Decimal to Octal.\n 5: Octal to Decimal.\n 6: Octal to Binary.\n");
+	printf("\n option = %d ",option);
 		switch(option){
 			case 1:
-				printf("\n Converting Binary to Decimal \n Enter Binary Value:");
 				binary = 101101;
+				printf("\n Converting Binary to Decimal \n binary = %ld",binary);	
 				decimal = Bin_to_Dec(binary);
-				printf("%ld\n\n",decimal);choice = 0;
+				printf("\n%ld\n\n",decimal);choice = 0;
 				break;
 			
 			case 2:
-				printf("\n Converting Binary to Octal \n Enter Binary Value:");
 				binary = 101101;
+				printf("\n Converting Binary to Octal \n Binary Value: %ld ",binary);
 				octal = Bin_to_Oct(binary);
-				printf("%ld\n\n",octal);choice = 0;
+				printf("\n%ld\n\n",octal);choice = 0;
 				break;
 				
 			case 3:
-				printf("\n Converting Binary to Hexadecimal \n Enter Binary Value:");
 				binary = 101101;
+				printf("\n Converting Binary to Hexadecimal \n Binary Value: %ld ",binary);
 				hexadecimal = Bin_to_Hex(binary);
-				printf("%lx\n\n",hexadecimal);choice = 0;
+				printf("\n%lx\n\n",hexadecimal);choice = 0;
 				break;
 			
 			case 4:
-				printf("\n Converting Decimal to Octal \n Enter Decimal Value:");
 				decimal = 625;
+				printf("\n Converting Decimal to Octal \n Decimal Value: %ld",decimal);	
 				octal = Dec_to_Oct(decimal);
-				printf("%ld\n\n",octal);choice = 0;
+				printf("\n%ld\n\n",octal);choice = 0;
 				break;
 				
 			case 5:
-				printf("\n Converting Octal to Decimal \n Enter Octal Value:");
 				octal = 26;
+				printf("\n Converting Octal to Decimal \n Octal Value: %ld",octal);
 				decimal = Oct_to_Dec(octal);
-				printf("%ld\n\n",decimal);choice = 0;
+				printf("\n%ld\n\n",decimal);choice = 0;
 				break;
 			case 6:
-				printf("\n Converting Octal to Binary \n Enter Octal Value:");
 				octal = 67;
-				binary = Oct_to_Bin(binary);
-				printf("%ld\n\n",binary);choice = 0;
+				printf("\n Converting Octal to Binary \n Octal Value: %ld",octal);
+				binary = Oct_to_Bin(octal);
+				printf("\n%ld\n\n",binary);choice = 0;
 				break;
 				
 			default:
-				printf("\nEnter valid Operation\n\n");
+				printf("\nEnter valid Operation\n\n"); choice = 0;
 				break;
 		}
 

@@ -87,26 +87,40 @@ long int Oct_to_Dec(long int oct)
 
 long int Oct_to_Bin(long int oct)
 {
-    long int dec = 0, i = 0;
-    long  bin = 0;
+   
     if((oct%10 == 8)||(oct % 10 == 9)){
             return -1;
     }
     else{
-    // converting octal to decimal
-    while (oct != 0) {
-        dec += (oct % 10) * pow(8, i);
-        ++i;
-        oct /= 10;
+        int decimalnum = 0, i = 0;
+    long binarynum = 0;
+
+    /* This loop converts octal number "octalnum" to the
+     * decimal number "decimalnum"
+     */
+    while(oct != 0)
+    {
+	decimalnum = decimalnum + (oct%10) * pow(8,i);
+	i++;
+	oct = oct / 10;
     }
+
+    //i is re-initialized
     i = 1;
 
-   // converting decimal to binary
-    while (dec != 0) {
-        bin += (dec % 2) * i;
-        dec /= 2;
-        i *= 10;
+    /* This loop converts the decimal number "decimalnum" to the binary
+     * number "binarynum"
+     */
+    while (decimalnum != 0)
+    {
+	binarynum = binarynum + (decimalnum % 2) * i;
+	decimalnum = decimalnum / 2;
+	i = i * 10;
     }
-    return bin;
+
+    //Returning the binary number that we got from octal number
+    return binarynum;
+  
+   
 }
 }
