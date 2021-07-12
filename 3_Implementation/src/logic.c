@@ -67,13 +67,14 @@ long int Dec_to_Oct(long int dec)
 long int Oct_to_Dec(long int oct)
 {   
     
-    long int dec = 0, i = 0;
+   
     if((oct %10 == 8 )|| (oct %10 == 9)){
         return -1;
     }
     else{
+    long int dec = 0, i = 0;
     while(oct != 0)
-    {
+    {    
         dec += (oct%10) * pow(8,i);
         ++i;
         oct/=10;

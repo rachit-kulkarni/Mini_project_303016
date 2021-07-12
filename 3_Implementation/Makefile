@@ -51,11 +51,12 @@ coverage:
 
 doc:
 	make -C ./documentation
+
 cppcheck:
-	cppcheck --enable=all $(SRC) main.c
+	cppcheck --enable=all  --suppress=missingIncludeSystem $(SRC) main.c 
 	
 valgrind:
-	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
+	valgrind  ./$(TEST_PROJ_NAME).$(EXEC)
 	
 clean:
 	$(RM) *.DAT
@@ -63,6 +64,13 @@ clean:
 	$(RM) *.gcda
 	$(RM) *.gcno
 	$(RM) *.c.gcov
+	$(RM) *.txt
+
+debug:
+	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC) -lm
+	gdb $(PROJ_NAME).$(EXEC)
+
 
 $(BUILD):
-	mkdir build
+	mkdir 
+	
