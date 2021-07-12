@@ -1,5 +1,5 @@
 
-# SDLC Activity Based Learning For Mini Project 
+# Mini Project 
 
 #C program to do Number system conversion.The program takes in the data in one of the number system and convert it to any other desired system.
 
@@ -33,6 +33,9 @@ SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
                                                  
   
 
+## Project Demo
+
+![Alt Text](6_ImagesandVideos/Demo.gif)
 
 
 
