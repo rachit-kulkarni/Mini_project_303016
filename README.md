@@ -26,10 +26,12 @@ Folder             | Description
 `4_Test_plan`      | Documents with test plans and procedures
 `5_Report`         | Project Report
 
-
 ## Contributors List and Summary
 
-1)Rachit G Kulkarni(303016)
+SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
+----------|------------|-------------------|------------|--------------
+`303016`  | `Rachit Kulkarni`   | `All the functions` |`12 NO`       | `12`
+
 
 ## Learning Resources
 1)https://www.geeksforgeeks.org/number-system-in-maths/ Used this to understand the conversions of various number systems.
