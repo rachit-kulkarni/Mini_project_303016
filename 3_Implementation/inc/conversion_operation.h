@@ -16,6 +16,7 @@
 #include <math.h>
 #include <stdio_ext.h>
 #include <string.h>
+#include <time.h>
 
 
 long int Bin_to_Dec(long int); /* Takes in the input of a binary number and converts it to Decimal*/ 
