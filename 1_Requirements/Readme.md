@@ -39,6 +39,7 @@ The main aim of the program/code is to take in the input of one number system an
 
 ## Interface
 The aim is to convert from the mentioned number systems to another.When the program is run the following screen is observed.
+![Image](../1_Requirements/interface.png)
 
 
 
