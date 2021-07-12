@@ -75,5 +75,3 @@ $(BUILD):
 	mkdir 
 	
 
-#ns
-
