@@ -1,16 +1,3 @@
-|Build|Code Coverage|Unity Testing |Codacy Security Scan |
-|-----|-------------|--------------|---------------------|
-|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|[![Unit Testing - Unity](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml)|![Codacy Security Scan](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/codacy-analysis.yml/badge.svg)|
-
-|                        Code Quality                                                        | Git-Instructor   |                                                         
-| ------------------------------------------------------------------------------------------ |------------------|    
-|[![cppcheck-action](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
-|![Image](https://www.code-inspector.com/project/24939/status/svg)                           |
-|![Image](https://www.code-inspector.com/project/24939/score/svg)                            |
-                                                 
-  
-
-
 
 # SDLC Activity Based Learning For Mini Project 
 
@@ -31,6 +18,22 @@ Folder             | Description
 SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
 ----------|------------|-------------------|------------|--------------
 `303016`  | `Rachit Kulkarni`   | `All the functions` |`12 NO`       | `12`
+
+## Badges Obtained
+
+|Build|Code Coverage|Unity Testing |Codacy Security Scan |
+|-----|-------------|--------------|---------------------|
+|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|[![Unit Testing - Unity](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml)|![Codacy Security Scan](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/codacy-analysis.yml/badge.svg)|
+
+|                        Code Quality                                                        | Git-Instructor   |                                                         
+| ------------------------------------------------------------------------------------------ |------------------|    
+|[![cppcheck-action](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
+|![Image](https://www.code-inspector.com/project/24939/status/svg)                           |
+|![Image](https://www.code-inspector.com/project/24939/score/svg)                            |
+                                                 
+  
+
+
 
 
 ## Learning Resources
