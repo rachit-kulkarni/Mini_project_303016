@@ -38,7 +38,9 @@ The main aim of the program/code is to take in the input of one number system an
 
 
 ## Interface
-The aim is to display which of the test cases work and display the number of cases passed and failed for each of the function written.
+The aim is to convert from the mentioned number systems to another.When the program is run the following screen is observed.
+
+
 
 ## Integration
 Each of the function was first written and then integrated to obtain the full functionality.
