@@ -31,20 +31,14 @@ The main aim of the program/code is to take in the input of one number system an
 ### How:
  It uses simple logic to convert the given input in one number system to desired number system.
 
-## Detail Requirements:
-
-
-
-
 
 ## Interface
 The aim is to convert from the mentioned number systems to another.When the program is run the following screen is observed.
-[Image](../1_Requirements/Interface.png)
-
+![Image](../1_Requirements/Interface.png)
 
 
 ## Integration
-Each of the function was first written and then integrated to obtain the full functionality.
+Each of the function was first written and then integrated to obtain the full functionality.The main function file main.c here automatically picks a random operation and performs the conversion.So if  a user wants to change the date he/she can update the value in the main function under the switch cases.
 
 ## Testing
 
@@ -52,7 +46,7 @@ Here various test cases are given to each of the following functions to make sur
 
 ## Functional Requirements
 
-As mentioned the code converts one number system value to another,each of the function written here needs a input data which is either binary or decimal.Using the test cases written we convert the given data to either binary,decimal or hexadecimal.
+As mentioned the code converts one number system value to another,each of the function written here needs a input data which is either binary or decimal.All the inputs are of the type long int.Using the test cases written we convert the given data to either binary,decimal or hexadecimal.
 
 ## Gantt Chart
 ![Image](../1_Requirements/GanttChart.jpg)
