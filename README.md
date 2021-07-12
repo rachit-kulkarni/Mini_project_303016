@@ -28,11 +28,9 @@ SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
 |                        Code Quality                                                        | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
 |[![cppcheck-action](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/cppcheck.yml)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
-|![Image](https://www.code-inspector.com/project/24939/status/svg)                           |
+|         [![Codacy Badge](https://app.codacy.com/project/badge/Grade/c16a2b2b27d54cc9a9ab32d947109314)](https://www.codacy.com/gh/rachit-kulkarni/Mini_project_303016/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rachit-kulkarni/Mini_project_303016&amp;utm_campaign=Badge_Grade)                |
 |![Image](https://www.code-inspector.com/project/24939/score/svg)                            |
-                                                 
-  
-
+                                                  
 ## Project Demo
 
 ![Alt Text](6_ImagesandVideos/Demo.gif)
