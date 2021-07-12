@@ -46,7 +46,7 @@ Here various test cases are given to each of the following functions to make sur
 
 ## Functional Requirements
 
-As mentioned the code converts one number system value to another,each of the function written here needs a input data which is either binary or decimal.All the inputs are of the type long int.Using the test cases written we convert the given data to either binary,decimal or hexadecimal.
+As mentioned the code converts one number system value to another,each of the function written here needs a input data which is either binary or decimal.All the inputs are of the type long int.
 
 ## Gantt Chart
 ![Image](../1_Requirements/GanttChart.jpg)
