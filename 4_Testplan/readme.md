@@ -46,7 +46,7 @@ Sl No|Function    |Description|
 | **Test ID** | **Description**                                              | **Exp I/P** | **Exp O/P** | **Actual Out** |**Type Of Test**  |    
 |-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
 |  H_01       |Checking all operation modes work fine|  By giving Choice between 1-6|All the modes of operations execute correctly|Obtained right results |Requirement based |
-|  H_02       |Checking for other operations other than specified in the program | By giving choice other than 1-6|"Enter Valid Option"|"Enter Valid Option"|Boundary based    |
+
 
 ## Table no: Low level test plan
 
