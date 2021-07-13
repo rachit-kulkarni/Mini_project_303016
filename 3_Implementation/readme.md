@@ -4,8 +4,13 @@
 |----------------------|--------------------|-------------------|------------------------------|
 |`conversion_operation.h`|`logic.c`|`operations_test.c`|`unity.c unity.h unity_internals.h`|
 
-**The folder also contains main.c and the make file to generate the executable file**
+## How to run Number System Converter
 
-**To run the code, run make all on the terminal and then make run**
-
-**As we should not take in any inputs from a user,the code generates random options to convert between the various number systems and coverts it correctly**
+1) Clone or Download the repository in your system
+2) Navigate to 3_Implementation folder
+3) Open your terminal here with this path and run `make`
+4) To See outputs run `make run`
+5) To see Testing of the code run `make test`
+6) For Valgrind run `make valgrind`
+7) For Cppcheck run `make cppcheck`
+8) For code coverage run `make coverage`
