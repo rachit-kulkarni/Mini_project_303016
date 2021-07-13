@@ -1,7 +1,7 @@
 *.gcda 
 *.gcno 
 *.gcov
-.vscode
+*.vscode
 # Doxygen Ouput
 *html
 # Prerequisites
