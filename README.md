@@ -58,6 +58,13 @@ No | Challenge Faced | How it was overcome
 
 
 ## Learning Resources
-1)https://www.geeksforgeeks.org/number-system-in-maths  Used this to understand the conversions of various number systems.
 
-2)Future Skills platform for setting up of VS Code,Github and various other necessities.
+1) GitHub Introduction : https://docs.microsoft.com/en-us/learn/modules/introduction-to-github-visual-studio-code/
+
+2) Unity_Testings :https://www.guru99.com/unit-testing-guide.html
+
+3) Doxygen: https://embeddedinventor.com/doxygen-tutorial-getting-started-using-doxygen-on-windows/
+
+4) Cpp_Check and Valgrind: https://github.com/stepin654321/MiniProject_Template/wiki/Windows_Setup#code-analysis
+
+5) Number System Conversion : https://www.geeksforgeeks.org/number-system-and-base-conversions/
