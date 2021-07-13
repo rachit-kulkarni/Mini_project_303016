@@ -11,25 +11,25 @@
 #include "conversion_operation.h"
 
 long int Bin_to_Dec(long int bin)
-{
-    long int sum=0,i=0;
+{//Function to convert binary to decimal
+    long int dec=0,i=0;
     while(bin!=0)
     {
         long int remainder=bin%10;
-        if((remainder != 0 )&&(remainder != 1)){return -1;}
+        if((remainder != 0 )&&(remainder != 1)){return -1;}//This vlaidates the given input
         else{
-        bin=bin/10;
-        sum=sum+remainder*pow(2,i);
-        i++;
+        bin=bin/10;//extracts the last bit(units place,tens place etc)
+        dec=dec+remainder*pow(2,i);//it just adds all these to get the decimal output
+        i++;//this is for the units place or tens place etc..
     }
     }
-    return sum;
+    return dec;//returning the decimal value
 }
  
 long int Bin_to_Oct(long int bin)
-{   long int dec = Bin_to_Dec(bin);
-    long int oct = Dec_to_Oct(dec);
-    return oct;
+{   long int dec = Bin_to_Dec(bin);//calling the binary to decimal converter
+    long int oct = Dec_to_Oct(dec);//calling the decimal to octal converter
+    return oct;//returning octal number
     
 }
  
@@ -40,28 +40,28 @@ long int Bin_to_Hex(long int bin)
     while (bin != 0)
     {
         long int remainder = bin % 10;
-        if((remainder != 0 )&&(remainder != 1)){return -1;}
+        if((remainder != 0 )&&(remainder != 1)){return -1;}//This vlaidates the given input
         else{
-        hexadecimalval = hexadecimalval + remainder * i;
+        hexadecimalval = hexadecimalval + remainder * i;//logic to obtain hexadecimal value
         i = i * 2;
-        bin = bin / 10;
+        bin = bin / 10;//extracts the last bit
     }
     }
-    return hexadecimalval;
+    return hexadecimalval;//returning the hexadecimal value
 }
 
 long int Dec_to_Oct(long int dec)
 {  
-    int octanum = 0, i = 1;
+    int octanum = 0, i = 1;//initialising all needed operands
 
     while (dec != 0)
     {
-        octanum += (dec % 8) * i;
-        dec /= 8;
+        octanum += (dec % 8) * i;//logic to obtain octal number
+        dec /= 8;//continous division 
         i *= 10;
     }
 
-    return octanum;
+    return octanum;//returning octal number
 }
 
 long int Oct_to_Dec(long int oct)
@@ -69,20 +69,20 @@ long int Oct_to_Dec(long int oct)
     
    
     if((oct %10 == 8 )|| (oct %10 == 9)){
-        return -1;
+        return -1;//This vlaidates the given input
     }
     else{
     long int dec = 0, i = 0;
     while(oct != 0)
     {    
-        dec += (oct%10) * pow(8,i);
+        dec += (oct%10) * pow(8,i);//logic to obtain the decimal values
         ++i;
-        oct/=10;
+        oct/=10;//extracting the last bit
     }
 
     i = 1;
 
-    return dec;
+    return dec;//returning decimal value
     }
 }
 
@@ -90,15 +90,11 @@ long int Oct_to_Bin(long int oct)
 {
    
     if((oct%10 == 8)||(oct % 10 == 9)){
-            return -1;
+            return -1;//This vlaidates the given input
     }
     else{
-        int decimalnum = 0, i = 0;
+        int decimalnum = 0, i = 0;//initialising
     long binarynum = 0;
-
-    /* This loop converts octal number "octalnum" to the
-     * decimal number "decimalnum"
-     */
     while(oct != 0)
     {
 	decimalnum = decimalnum + (oct%10) * pow(8,i);
