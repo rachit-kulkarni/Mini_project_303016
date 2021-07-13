@@ -18,6 +18,6 @@ jobs:
         sudo apt-get -y install valgrind
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
-      run: make test -C Mini_project_303016/3_Implementation/test
+      run: make -C Mini_project_303016/3_Implementation/ test
     - name: make valgrind
       run: valgrind ./3_Implementation/CONVERSION_LOGIC.out
