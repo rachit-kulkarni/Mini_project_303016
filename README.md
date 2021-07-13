@@ -21,9 +21,9 @@ SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
 
 ## Badges Obtained
 
-|Build|Code Coverage|Unity Testing |Codacy Security Scan |
-|-----|-------------|--------------|---------------------|
-|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|[![Unit Testing - Unity](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml)|![Codacy Security Scan](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/codacy-analysis.yml/badge.svg)|
+|Build|Code Coverage|Unity Testing |Codacy Security Scan | Valgrind |
+|-----|-------------|--------------|---------------------|----------|
+|[![C/C++ CI](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/c-build.yml)|[![CI-Coverage](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/code_coverage.yml)|[![Unit Testing - Unity](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/unity.yml)|![Codacy Security Scan](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/codacy-analysis.yml/badge.svg)|[![Valgrind](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/valgrind.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/valgrind.yml)|
 
 |                        Code Quality                                                        | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
