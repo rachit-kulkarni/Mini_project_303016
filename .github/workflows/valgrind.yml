@@ -20,6 +20,6 @@ jobs:
     - name: make build
       run: make all -C 3_Implementation/
     - name: make test
-      run: make -C Mini_project_303016/3_Implementation/ test
+      run: make test -C /3_Implementation/ 
     - name: make valgrind
       run: valgrind ./3_Implementation/CONVERSION_LOGIC.out
