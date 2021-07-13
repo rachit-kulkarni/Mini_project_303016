@@ -27,9 +27,9 @@ Folder             | Description
 
 ## Contributors List and Summary
 
-SF ID     |  Name      |    Features       |No Test Cases|Test Case Pass
-----------|------------|-------------------|------------|--------------
-`303016`  | `Rachit Kulkarni`   | `All the functions` |`12 NO`       | `12`
+SF ID     |  Name      |    Features       |No of Issues Raised|No of Issues Resolved|No Test Cases|Test Case Pass
+----------|------------|-------------------|-------------------|---------------------|-------------|----------------
+`303016`  | `Rachit Kulkarni`   | `All the functions` |`3`|`3`|`12 NO`       | `12`
 
 ## Features:
 
