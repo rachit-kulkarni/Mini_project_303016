@@ -7,6 +7,3 @@
 ## Number System Conversion Low Case Diagraam
 
 ![Image](../2_Design/Case_diagram.png)
-
-
-
