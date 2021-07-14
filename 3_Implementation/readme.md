@@ -10,7 +10,7 @@
 2) Navigate to 3_Implementation folder
 3) Open your terminal here with this path and run `make`
 4) To See outputs run `make run` .
-   ** If you want to give different inputs to the functions open main.c and change the values in each of the function**
+   **If you want to give different inputs to the functions open main.c and change the values in each of the function**
    
 5) To see Testing of the code run `make test`
 6) For Valgrind run `make valgrind`
