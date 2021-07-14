@@ -4,7 +4,7 @@
 
 
 
-## Number System Conversion Case Diagram
+## Number System Conversion Low Case Diagraam
 
 ![Image](../2_Design/Case_diagram.png)
 
