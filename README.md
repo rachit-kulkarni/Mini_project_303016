@@ -11,7 +11,7 @@ C program to do Number system conversion.The program takes in the data in one of
 
 |                        Code Inspector                                                       | Git-Instructor   |                                                         
 | ------------------------------------------------------------------------------------------ |------------------|    
-|![Codacy Badge](https://www.code-inspector.com/project/24939/status/svg)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
+|![Codacy Badge](https://www.code-inspector.com/project/24939/status/svg)|[![Contribution Check - Git Inspector](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml/badge.svg?branch=main)](https://github.com/rachit-kulkarni/Mini_project_303016/actions/workflows/Git_Inspector.yml)
 |![Image](https://www.code-inspector.com/project/24939/score/svg)                            
 
 
