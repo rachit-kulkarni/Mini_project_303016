@@ -1,77 +1,83 @@
-PROJ_NAME = CONVERSION_LOGIC
+PROJ_NAME = Conversion_logic
 TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-#all source files
-SRC =src/logic.c
+# Output directory
+BUILD_DIR = build
 
-#all test source files
+# Main file name
+MAIN_NAME = main.c
 
+# All source code files
+SRC = src/logic.c
+
+
+# All test source files
 TEST_SRC = test/operations_test.c\
 unity/unity.c
 
-COV_SRC = operations_test.c
+# All include folders with header files
+INC = -Iinc\
+-Iunity
 
-INC_H = inc
-INC_T = unity
+# All include folders for cppcheck
+CPPCHECK_INC = -Iinc src
 
-
-#selecting executable file
-
+#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 ifdef OS
+   MOVE = move
    RM = del /q
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
    ifeq ($(shell uname), Linux)
+	  MOVE = mv
       RM = rm -rf
       FixPath = $1
 	  EXEC = out
    endif
 endif
 
+# Makefile will not run target command if the name with file already exists. To override, use .PHONY
+.PHONY : all test coverage run clean doc
 
-.PHONY: run clean test doc all
+all:$(BUILD_DIR)
+	gcc $(MAIN_NAME) $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC)) -lm
 
-all:
-	gcc -I $(INC_H) $(SRC) main.c -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
-	
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC)) 
 
-run:
-	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+test: $(SRC) $(TEST_SRC) $(BUILD_DIR)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)) -lm
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-test:
-	gcc -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC)) -lm
-	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
-
-
-coverage:
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c  test/operations_test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC)) -lm
-	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(COV_SRC)
+coverage:${PROJECT_NAME} $(BUILD_DIR)
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)) -lm
+#gcc -fprofile-arcs -ftest-coverage $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(MOVE) *.gcno src
+	$(MOVE) *.gcda src
+	gcov -a $(SRC)
+	$(RM) $(call FixPath,src/*.gcda)
+	$(RM) $(call FixPath,src/*.gcno)
 
 doc:
-	make -C ./documentation
+	make -C documentation
 
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
+	
 cppcheck:
-	cppcheck --enable=all  --suppress=missingIncludeSystem $(SRC) main.c 
+	cppcheck --enable=all $(CPPCHECK_INC) *.c
 	
-valgrind:
-	valgrind  ./$(TEST_PROJ_NAME).$(EXEC)
+valgrind_main: all
+	valgrind $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 	
+valgrind_test: $(SRC) $(TEST_SRC) $(BUILD_DIR)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC)) -lm
+	valgrind $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	
+
 clean:
-	$(RM) *.DAT
-	$(RM) *.$(EXEC)
-	$(RM) *.gcda
-	$(RM) *.gcno
-	$(RM) *.c.gcov
-	$(RM) *.txt
-
-debug:
-	gcc -I $(INC_H) $(SRC) main.c -g -o $(PROJ_NAME).$(EXEC) -lm
-	gdb $(PROJ_NAME).$(EXEC)
-
-
-$(BUILD):
-	mkdir 
-	
-
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	make clean -C doc
+	rmdir $(BUILD_DIR) doc/html
