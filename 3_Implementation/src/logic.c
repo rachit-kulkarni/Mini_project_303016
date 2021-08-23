@@ -9,7 +9,7 @@
  * 
  */ 
 #include "conversion_operation.h"
-
+//printf
 long int Bin_to_Dec(long int bin)
 {//Function to convert binary to decimal
     long int dec=0,i=0;
