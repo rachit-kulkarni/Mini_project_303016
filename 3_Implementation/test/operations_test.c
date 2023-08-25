@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2021
  * 
  */
-
+#include<stdio.h>
 #include "conversion_operation.h"
 #include "unity.h"
 #include "unity_internals.h"
